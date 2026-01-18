@@ -1,0 +1,9 @@
+{
+  "name": "click-it-contact-form",
+  "version": "1.0.0",
+  "description": "Lambda function for handling contact form submissions",
+  "main": "contact-form-handler.js",
+  "dependencies": {
+    "aws-sdk": "^2.1400.0"
+  }
+}

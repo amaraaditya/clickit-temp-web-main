@@ -1,0 +1,16 @@
+{
+  "name": "click-it-web",
+  "version": "1.0.0",
+  "description": "Click IT - Urban logistics platform website",
+  "main": "index.html",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": ["logistics", "urban", "delivery"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {}
+}
+
