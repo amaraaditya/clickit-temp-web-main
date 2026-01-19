@@ -165,7 +165,7 @@
             
             <div class="footer-bottom">
                 <div class="footer-copyright">
-                    <p>&copy; 2024 Click IT. All rights reserved.</p>
+                    <p>&copy; 2026 Click IT. All rights reserved.</p>
                 </div>
                 <div class="footer-legal">
                     <a href="#">Privacy Policy</a>
@@ -179,11 +179,18 @@
     <!-- Scripts -->
     <script src="./config/constants.js"></script>
     <script src="./js/main.js"></script>
+    <!-- EmailJS Integration -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script>
-        // Contact form handling with AWS API Gateway
-        const API_URL = 'YOUR_API_GATEWAY_URL_HERE'; // Replace with your API Gateway URL
-        
-        document.getElementById('contactForm').addEventListener('submit', async function(e) {
+        // Initialize EmailJS
+        // Public Key configured: 3g0D8tyM4HFNp-1aK
+        // IMPORTANT: Make sure your EmailJS template's "To Email" is set to: hello@xpurt.co.uk
+        (function(){
+            emailjs.init("3g0D8tyM4HFNp-1aK");
+        })();
+
+        // Contact form handling with EmailJS
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
             e.preventDefault();
             
             const form = this;
@@ -194,41 +201,20 @@
             submitButton.disabled = true;
             submitButton.textContent = 'Sending...';
             
-            // Get form data
-            const formData = {
-                name: document.getElementById('name').value,
-                email: document.getElementById('email').value,
-                subject: document.getElementById('subject').value,
-                message: document.getElementById('message').value
-            };
-            
-            try {
-                const response = await fetch(API_URL, {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify(formData)
-                });
-                
-                const data = await response.json();
-                
-                if (data.success) {
-                    // Show success message
-                    alert(data.message || 'Thank you for your message! We will get back to you soon.');
+            // Send email via EmailJS
+            // Using your Service ID and Template ID
+            emailjs.sendForm('service_dwv0oec', 'template_8zdns32', form)
+                .then(function() {
+                    alert('Thank you for your message! We will get back to you soon.');
                     form.reset();
-                } else {
-                    // Show error message
-                    alert(data.error || 'An error occurred. Please try again later.');
-                }
-            } catch (error) {
-                console.error('Error:', error);
-                alert('An error occurred while sending your message. Please try again later.');
-            } finally {
-                // Re-enable submit button
-                submitButton.disabled = false;
-                submitButton.textContent = originalText;
-            }
+                }, function(error) {
+                    console.error('EmailJS Error:', error);
+                    alert('An error occurred. Please try again later.');
+                })
+                .finally(function() {
+                    submitButton.disabled = false;
+                    submitButton.textContent = originalText;
+                });
         });
     </script>
 </body>

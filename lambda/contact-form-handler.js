@@ -1,10 +1,9 @@
 /**
  * AWS Lambda function to handle contact form submissions
- * Sends email via AWS SES
+ * Uses SendGrid for email delivery
  */
 
-const AWS = require('aws-sdk');
-const ses = new AWS.SES({ region: process.env.AWS_REGION || 'us-east-1' });
+const sgMail = require('@sendgrid/mail');
 
 exports.handler = async (event) => {
     // CORS headers
@@ -54,13 +53,24 @@ exports.handler = async (event) => {
             };
         }
 
-        // Get recipient email from environment variable or use default
-        const recipientEmail = process.env.RECIPIENT_EMAIL || 'your-email@example.com';
-        const senderEmail = process.env.SENDER_EMAIL || 'noreply@clickit.com';
+        // Initialize SendGrid
+        sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
-        // Create email content
-        const emailSubject = `Contact Form: ${subject} - Click IT`;
-        const emailBody = `
+        // Get recipient and sender from environment variables
+        const recipientEmail = process.env.RECIPIENT_EMAIL;
+        const senderEmail = process.env.SENDER_EMAIL;
+
+        if (!recipientEmail || !senderEmail) {
+            throw new Error('RECIPIENT_EMAIL and SENDER_EMAIL must be set in environment variables');
+        }
+
+        // Create email message
+        const msg = {
+            to: recipientEmail,
+            from: senderEmail, // Must be verified in SendGrid
+            replyTo: email, // Allow replying directly to the sender
+            subject: `Contact Form: ${subject} - Click IT`,
+            text: `
 New contact form submission from Click IT website:
 
 Name: ${name}
@@ -72,50 +82,33 @@ ${message}
 
 ---
 This email was sent from the Click IT contact form.
-        `.trim();
-
-        const htmlBody = `
-            <html>
-                <body>
-                    <h2>New Contact Form Submission</h2>
-                    <p><strong>Name:</strong> ${name}</p>
-                    <p><strong>Email:</strong> ${email}</p>
-                    <p><strong>Subject:</strong> ${subject}</p>
-                    <hr>
-                    <p><strong>Message:</strong></p>
-                    <p>${message.replace(/\n/g, '<br>')}</p>
-                    <hr>
-                    <p style="color: #666; font-size: 12px;">This email was sent from the Click IT contact form.</p>
-                </body>
-            </html>
-        `;
-
-        // Send email via SES
-        const params = {
-            Source: senderEmail,
-            Destination: {
-                ToAddresses: [recipientEmail]
-            },
-            Message: {
-                Subject: {
-                    Data: emailSubject,
-                    Charset: 'UTF-8'
-                },
-                Body: {
-                    Text: {
-                        Data: emailBody,
-                        Charset: 'UTF-8'
-                    },
-                    Html: {
-                        Data: htmlBody,
-                        Charset: 'UTF-8'
-                    }
-                }
-            },
-            ReplyToAddresses: [email] // Allow replying directly to the sender
+            `.trim(),
+            html: `
+                <html>
+                    <body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333; max-width: 600px; margin: 0 auto; padding: 20px;">
+                        <div style="background: linear-gradient(135deg, #C8102E 0%, #012169 50%, #C8102E 100%); padding: 20px; border-radius: 8px 8px 0 0;">
+                            <h2 style="color: #ffffff; margin: 0;">New Contact Form Submission</h2>
+                        </div>
+                        <div style="background: #ffffff; padding: 30px; border: 1px solid #e0e0e0; border-top: none;">
+                            <p><strong>Name:</strong> ${name}</p>
+                            <p><strong>Email:</strong> <a href="mailto:${email}">${email}</a></p>
+                            <p><strong>Subject:</strong> ${subject}</p>
+                            <hr style="border: 1px solid #e0e0e0; margin: 20px 0;">
+                            <p><strong>Message:</strong></p>
+                            <div style="background: #f5f5f5; padding: 15px; border-radius: 5px; border-left: 4px solid #C8102E;">
+                                ${message.replace(/\n/g, '<br>')}
+                            </div>
+                        </div>
+                        <div style="background: #f8f8f8; padding: 15px; border-radius: 0 0 8px 8px; border: 1px solid #e0e0e0; border-top: none;">
+                            <p style="color: #666; font-size: 12px; margin: 0;">This email was sent from the Click IT contact form.</p>
+                        </div>
+                    </body>
+                </html>
+            `
         };
 
-        await ses.sendEmail(params).promise();
+        // Send email via SendGrid
+        await sgMail.send(msg);
 
         // Return success response
         return {
@@ -129,6 +122,11 @@ This email was sent from the Click IT contact form.
 
     } catch (error) {
         console.error('Error processing contact form:', error);
+        
+        // Handle SendGrid specific errors
+        if (error.response) {
+            console.error('SendGrid Error Details:', error.response.body);
+        }
         
         return {
             statusCode: 500,
