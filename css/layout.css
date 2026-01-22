@@ -29,7 +29,7 @@
   left: 0;
   right: 0;
   height: 4px;
-  background: linear-gradient(90deg, #C8102E 0%, #012169 50%, #C8102E 100%);
+  background: linear-gradient(90deg, #ff3008 0%, #014a81 50%, #ff3008 100%);
 }
 
 .section-title {
@@ -65,7 +65,7 @@
   padding: 2.5rem;
   background: #ffffff;
   border-radius: 20px;
-  border: 1px solid rgba(200, 16, 46, 0.15);
+  border: 1px solid rgba(255, 48, 8, 0.15);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
   height: 100%;
@@ -82,7 +82,7 @@
   left: 0;
   right: 0;
   height: 4px;
-  background: linear-gradient(90deg, #C8102E 0%, #A00E24 100%);
+  background: linear-gradient(90deg, #ff3008 0%, #A00E24 100%);
   transform: scaleX(0);
   transition: transform 0.4s ease;
 }
@@ -93,8 +93,8 @@
 
 .feature-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 12px 32px rgba(200, 16, 46, 0.25);
-  border-color: rgba(200, 16, 46, 0.3);
+  box-shadow: 0 12px 32px rgba(255, 48, 8, 0.25);
+  border-color: rgba(255, 48, 8, 0.3);
 }
 
 .feature-card h3 {

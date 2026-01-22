@@ -8,19 +8,10 @@
     <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
-    <!-- Navigation -->
+    <!-- Navigation - Rendered by components.js -->
     <nav class="nav">
         <div class="nav-container">
-            <a href="index.html" class="nav-logo">
-                <img src="./images/full_logo_with_text.png" alt="Click IT" class="logo-img">
-            </a>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="customers.html">For Customers</a></li>
-                <li><a href="vendors.html">For Vendors</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
+            <!-- Navigation will be inserted here by components.js -->
         </div>
     </nav>
 
@@ -28,8 +19,12 @@
     <section class="page-hero-modern">
         <div class="container">
             <div class="page-hero-content">
-                <h1>Contact Us</h1>
-                <p class="page-hero-subtitle">We'd love to hear from you. Get in touch with our team and let's build something great together.</p>
+                <div class="hero-badge pulse-badge" style="margin-bottom: 2rem;">
+                    <span class="badge-icon">💬</span>
+                    <span>Get in Touch</span>
+                </div>
+                <h1>Contact Click IT</h1>
+                <p class="page-hero-subtitle">Get in touch with <strong>Click IT</strong>. Whether you're a customer, vendor, or partner — we're here to help you succeed. Ready to simplify urban logistics in the UK? Let's start the conversation.</p>
             </div>
         </div>
     </section>
@@ -39,12 +34,12 @@
         <div class="container">
             <div class="section-header-modern">
                 <h2>Get in Touch</h2>
-                <p class="section-subtitle">Ready to simplify urban logistics? Let's start the conversation.</p>
+                <p class="section-subtitle">Ready to simplify urban logistics in the UK? Let's start the conversation.</p>
             </div>
             <div class="contact-grid">
                 <div class="contact-form-container">
-                    <h3 style="font-size: 1.75rem; margin-bottom: 1rem;">Send us a Message</h3>
-                    <p class="bold-statement" style="margin-bottom: 2rem;">Fill out the form below and we'll get back to you as soon as possible.</p>
+                    <h3 style="font-size: 1.75rem; margin-bottom: 1rem; font-weight: 700;">Send us a Message</h3>
+                    <p class="bold-statement" style="margin-bottom: 2rem; font-size: 1.125rem;">Fill out the form below and we'll get back to you as soon as possible. We typically respond within 24 hours.</p>
                     <form class="contact-form" id="contactForm">
                         <div class="form-group">
                             <label for="name">Name</label>
@@ -68,7 +63,12 @@
                             <label for="message">Message</label>
                             <textarea id="message" name="message" rows="6" required placeholder="Your message..."></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary">Send Message</button>
+                        <button type="submit" class="btn btn-primary btn-large btn-arrow">
+                            <span>Send Message</span>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
                     </form>
                 </div>
                 <div class="contact-info">
@@ -76,36 +76,36 @@
                         <div class="contact-icon">
                             <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <rect width="48" height="48" rx="8" fill="#F5F5F5"/>
-                                <path d="M24 12L16 20H20V28H28V20H32L24 12Z" fill="#C8102E"/>
+                                <path d="M24 12L16 20H20V28H28V20H32L24 12Z" fill="#ff3008"/>
                             </svg>
                         </div>
                         <h3>Email Us</h3>
-                        <p>hello@clickit.com</p>
-                        <p>support@clickit.com</p>
+                        <p><strong>hello@clickituk.co.uk</strong></p>
+                        <p>support@clickituk.co.uk</p>
                     </div>
                     <div class="contact-card">
                         <div class="contact-icon">
                             <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <rect width="48" height="48" rx="8" fill="#F5F5F5"/>
-                                <circle cx="24" cy="20" r="8" fill="#C8102E"/>
-                                <path d="M12 36C12 28 18 24 24 24C30 24 36 28 36 36" stroke="#C8102E" stroke-width="3" fill="none"/>
+                                <circle cx="24" cy="20" r="8" fill="#ff3008"/>
+                                <path d="M12 36C12 28 18 24 24 24C30 24 36 28 36 36" stroke="#ff3008" stroke-width="3" fill="none"/>
                             </svg>
                         </div>
                         <h3>Call Us</h3>
-                        <p>+1 (555) 123-4567</p>
-                        <p>Mon-Fri: 9 AM - 6 PM</p>
+                        <p>+44 20 1234 5678</p>
+                        <p>Mon-Fri: 9 AM - 6 PM GMT</p>
                     </div>
                     <div class="contact-card">
                         <div class="contact-icon">
                             <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <rect width="48" height="48" rx="8" fill="#F5F5F5"/>
-                                <rect x="12" y="12" width="24" height="24" rx="4" fill="#C8102E" opacity="0.3"/>
-                                <path d="M24 20L20 24L24 28L28 24L24 20Z" fill="#C8102E"/>
+                                <rect x="12" y="12" width="24" height="24" rx="4" fill="#ff3008" opacity="0.3"/>
+                                <path d="M24 20L20 24L24 28L28 24L24 20Z" fill="#ff3008"/>
                             </svg>
                         </div>
-                        <h3>Visit Us</h3>
-                        <p>123 Urban Street</p>
-                        <p>City, State 12345</p>
+                        <h3>Location</h3>
+                        <p>United Kingdom</p>
+                        <p>Launching Q1 2026</p>
                     </div>
                     <div class="contact-image-container">
                         <img src="./images/shopping_cart_with_boxes.jpg" alt="Contact us" class="contact-image">
@@ -119,48 +119,7 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-section footer-brand">
-                    <a href="index.html" class="footer-logo">
-                        <img src="./images/full_logo_with_text.png" alt="Click IT" class="footer-logo-img">
-                    </a>
-                    <p class="footer-tagline">Urban life, simplified. On tap.</p>
-                    <p class="footer-description">Essentials delivery and small-item movement across the city using a single trusted platform.</p>
-                </div>
-                
-                <div class="footer-section footer-links">
-                    <h3 class="footer-heading">Quick Links</h3>
-                    <ul class="footer-nav">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="customers.html">For Customers</a></li>
-                        <li><a href="vendors.html">For Vendors</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section footer-info">
-                    <h3 class="footer-heading">Get in Touch</h3>
-                    <ul class="footer-contact">
-                        <li>
-                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M2.5 6.66667L10 11.6667L17.5 6.66667M3.33333 15H16.6667C17.5871 15 18.3333 14.2538 18.3333 13.3333V6.66667C18.3333 5.74619 17.5871 5 16.6667 5H3.33333C2.41286 5 1.66667 5.74619 1.66667 6.66667V13.3333C1.66667 14.2538 2.41286 15 3.33333 15Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                            <span>info@clickit.com</span>
-                        </li>
-                        <li>
-                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M2.5 4.16667H6.25L8.33333 8.33333L6.25 10C7.08333 12.5 9.16667 14.5833 11.6667 15.4167L13.3333 13.3333L17.5 15.4167V19.1667C17.5 19.625 17.125 20 16.6667 20C7.5 20 0 12.5 0 3.33333C0 2.875 0.375 2.5 0.833333 2.5H4.58333V6.25L2.5 8.33333L4.58333 10L6.25 8.33333L8.33333 10.4167L6.25 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                            <span>+44 20 1234 5678</span>
-                        </li>
-                        <li>
-                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M17.5 10C17.5 14.1421 14.1421 17.5 10 17.5M17.5 10C17.5 5.85786 14.1421 2.5 10 2.5M17.5 10H2.5M10 17.5C5.85786 17.5 2.5 14.1421 2.5 10M10 17.5C11.3807 17.5 12.5 14.1421 12.5 10C12.5 5.85786 11.3807 2.5 10 2.5M10 17.5C8.61929 17.5 7.5 14.1421 7.5 10C7.5 5.85786 8.61929 2.5 10 2.5M2.5 10C2.5 5.85786 5.85786 2.5 10 2.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                            <span>London, United Kingdom</span>
-                        </li>
-                    </ul>
-                </div>
+                <!-- Footer content will be inserted here by components.js -->
             </div>
             
             <div class="footer-bottom">
@@ -176,46 +135,65 @@
         </div>
     </footer>
 
-    <!-- Scripts -->
+    <!-- Scripts - Load in order: config, theme, components, main -->
     <script src="./config/constants.js"></script>
+    <script src="./js/theme.js"></script>
+    <script src="./js/components.js"></script>
     <script src="./js/main.js"></script>
     <!-- EmailJS Integration -->
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script>
-        // Initialize EmailJS
-        // Public Key configured: 3g0D8tyM4HFNp-1aK
-        // IMPORTANT: Make sure your EmailJS template's "To Email" is set to: hello@xpurt.co.uk
-        (function(){
-            emailjs.init("3g0D8tyM4HFNp-1aK");
-        })();
-
-        // Contact form handling with EmailJS
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const form = this;
-            const submitButton = form.querySelector('button[type="submit"]');
-            const originalText = submitButton.textContent;
-            
-            // Disable submit button
-            submitButton.disabled = true;
-            submitButton.textContent = 'Sending...';
-            
-            // Send email via EmailJS
-            // Using your Service ID and Template ID
-            emailjs.sendForm('service_dwv0oec', 'template_8zdns32', form)
-                .then(function() {
-                    alert('Thank you for your message! We will get back to you soon.');
-                    form.reset();
-                }, function(error) {
-                    console.error('EmailJS Error:', error);
-                    alert('An error occurred. Please try again later.');
-                })
-                .finally(function() {
-                    submitButton.disabled = false;
-                    submitButton.textContent = originalText;
-                });
-        });
+        // Wait for EmailJS to load before initializing
+        function initEmailJS() {
+            if (typeof emailjs !== 'undefined') {
+                // Initialize EmailJS
+                // Public Key configured: 3g0D8tyM4HFNp-1aK
+                // IMPORTANT: Make sure your EmailJS template's "To Email" is set to: hello@clickituk.co.uk
+                emailjs.init("3g0D8tyM4HFNp-1aK");
+                
+                // Contact form handling with EmailJS
+                const contactForm = document.getElementById('contactForm');
+                if (contactForm) {
+                    contactForm.addEventListener('submit', function(e) {
+                        e.preventDefault();
+                        
+                        const form = this;
+                        const submitButton = form.querySelector('button[type="submit"]');
+                        const originalText = submitButton.textContent;
+                        
+                        // Disable submit button
+                        submitButton.disabled = true;
+                        submitButton.textContent = 'Sending...';
+                        
+                        // Send email via EmailJS
+                        // Using your Service ID and Template ID
+                        emailjs.sendForm('service_dwv0oec', 'template_8zdns32', form)
+                            .then(function() {
+                                alert('Thank you for your message! We will get back to you soon.');
+                                form.reset();
+                            }, function(error) {
+                                console.error('EmailJS Error:', error);
+                                alert('An error occurred. Please try again later.');
+                            })
+                            .finally(function() {
+                                submitButton.disabled = false;
+                                submitButton.textContent = originalText;
+                            });
+                    });
+                }
+            } else {
+                // EmailJS not loaded yet, wait a bit and try again
+                setTimeout(initEmailJS, 50);
+            }
+        }
+        
+        // Start initialization when DOM is ready
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initEmailJS);
+        } else {
+            // DOM already loaded, start checking for EmailJS
+            initEmailJS();
+        }
     </script>
 </body>
 </html>

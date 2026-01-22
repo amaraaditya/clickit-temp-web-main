@@ -6,4 +6,10 @@
 @import url('./base.css');
 @import url('./layout.css');
 @import url('./components.css');
+@import url('./theme.css');
+@import url('./homepage.css');
+@import url('./premium-design.css');
+@import url('./how-it-works.css');
+@import url('./vendor-onboarding.css');
+@import url('./coming-soon.css');
 

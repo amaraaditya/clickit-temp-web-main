@@ -1,12 +1,42 @@
 /**
  * Base Styles
  * Reset, typography, and fundamental styles
+ * Dark theme is the default
  */
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+:root {
+  /* Brand Colors */
+  --color-orange: #ff3008;
+  --color-blue: #014a81;
+  --color-orange-dark: #cc2606;
+  
+  /* Dark Theme (Default) - Softer, more user-friendly */
+  --bg-primary: #1a1d24;
+  --bg-secondary: #252932;
+  --bg-tertiary: #2f3440;
+  --text-primary: #f5f5f5;
+  --text-secondary: #d0d0d0;
+  --text-tertiary: #a0a0a0;
+  --border-color: #3a3f4a;
+  --shadow-color: rgba(0, 0, 0, 0.3);
+}
+
+.light-theme {
+  /* Light Theme */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f5f5f5;
+  --bg-tertiary: #e8e8e8;
+  --text-primary: #1a1a1a;
+  --text-secondary: #2a2a2a;
+  --text-tertiary: #666666;
+  --border-color: #e0e0e0;
+  --shadow-color: rgba(0, 0, 0, 0.1);
 }
 
 html {
@@ -18,18 +48,19 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   font-size: 1.125rem;
   line-height: 1.7;
-  color: #2a2a2a;
-  background-color: #ffffff;
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
   line-height: 1.2;
   margin-bottom: 1rem;
-  color: #1a1a1a;
+  color: var(--text-primary);
 }
 
 h1 {
@@ -46,17 +77,17 @@ h3 {
 
 p {
   margin-bottom: 1.5rem;
-  color: #2a2a2a;
+  color: var(--text-secondary);
 }
 
 a {
-  color: #C8102E;
+  color: var(--color-orange);
   text-decoration: none;
   transition: color 0.3s ease-in-out;
 }
 
 a:hover {
-  color: #A00E24;
+  color: var(--color-orange-dark);
 }
 
 ul, ol {
@@ -76,13 +107,67 @@ img {
 
 /* Focus styles for accessibility */
 :focus {
-  outline: 2px solid #C8102E;
+  outline: 2px solid var(--color-orange);
   outline-offset: 2px;
 }
 
 /* Selection styles */
 ::selection {
-  background-color: #C8102E;
-  color: #ffffff;
+  background-color: var(--color-orange);
+  color: var(--text-primary);
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+  background: var(--bg-secondary);
+  border: 2px solid var(--border-color);
+  border-radius: 12px;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: var(--text-primary);
+  margin-left: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.theme-toggle:hover {
+  background: var(--bg-tertiary);
+  border-color: var(--color-orange);
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(255, 48, 8, 0.2);
+}
+
+.theme-icon {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.3s ease;
+  position: absolute;
+}
+
+.theme-icon-text {
+  font-size: 1.25rem;
+  transition: transform 0.3s ease;
+  position: absolute;
+}
+
+.theme-toggle:hover .theme-icon,
+.theme-toggle:hover .theme-icon-text {
+  transform: rotate(15deg) scale(1.1);
+}
+
+.light-theme .theme-toggle {
+  background: #ffffff;
+  border-color: #e0e0e0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.light-theme .theme-toggle:hover {
+  border-color: var(--color-orange);
+  box-shadow: 0 4px 12px rgba(255, 48, 8, 0.2);
 }
 

@@ -1,0 +1,295 @@
+/**
+ * Vendor Onboarding Section
+ * Properly styled for both light and dark themes
+ */
+
+.vendor-onboarding-section {
+  background: linear-gradient(135deg, #014a81 0%, #ff3008 100%) !important;
+  color: #ffffff;
+  padding: 6rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.vendor-onboarding-section::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+  animation: rotateGradient 20s linear infinite;
+  pointer-events: none;
+}
+
+.vendor-onboarding-section::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+@keyframes rotateGradient {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.vendor-onboarding-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+  z-index: 1;
+}
+
+.vendor-onboarding-title {
+  color: #ffffff !important;
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  letter-spacing: -0.02em;
+}
+
+.vendor-onboarding-subtitle {
+  color: rgba(255, 255, 255, 0.95) !important;
+  font-size: 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.vendor-onboarding-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.vendor-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.vendor-stat-card {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  padding: 2rem;
+  border-radius: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.vendor-stat-card:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.4);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.15);
+}
+
+.vendor-stat-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.vendor-stat-label {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 500;
+}
+
+.vendor-onboarding-cta {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.vendor-onboarding-footer {
+  margin-top: 2rem;
+  color: rgba(255, 255, 255, 0.85) !important;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+/* Button styles for vendor onboarding section */
+.vendor-onboarding-section .btn-white {
+  background: #ffffff !important;
+  color: #014a81 !important;
+  border: 2px solid #ffffff !important;
+  font-weight: 700;
+  padding: 1.25rem 3rem;
+  box-shadow: 0 8px 32px rgba(255, 255, 255, 0.3), 0 0 40px rgba(255, 255, 255, 0.2) !important;
+  /* Override any gradient animations from btn-primary */
+  background-size: 100% 100% !important;
+  animation: none !important;
+}
+
+.vendor-onboarding-section .btn-white span,
+.vendor-onboarding-section .btn-white svg {
+  color: #014a81 !important;
+}
+
+.vendor-onboarding-section .btn-white svg path {
+  stroke: #014a81 !important;
+  fill: none !important;
+}
+
+.vendor-onboarding-section .btn-white:hover {
+  background: rgba(255, 255, 255, 0.95) !important;
+  color: #014a81 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 48px rgba(255, 255, 255, 0.4), 0 0 60px rgba(255, 255, 255, 0.3) !important;
+}
+
+.vendor-onboarding-section .btn-white:hover span,
+.vendor-onboarding-section .btn-white:hover svg {
+  color: #014a81 !important;
+}
+
+.vendor-onboarding-section .btn-white:hover svg path {
+  stroke: #014a81 !important;
+}
+
+.vendor-onboarding-section .btn-outline-white {
+  background: transparent !important;
+  color: #ffffff !important;
+  border: 2px solid rgba(255, 255, 255, 0.8) !important;
+  padding: 1.25rem 3rem;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.vendor-onboarding-section .btn-outline-white span,
+.vendor-onboarding-section .btn-outline-white svg {
+  color: #ffffff !important;
+}
+
+.vendor-onboarding-section .btn-outline-white svg path {
+  stroke: #ffffff !important;
+  fill: #ffffff !important;
+}
+
+.vendor-onboarding-section .btn-outline-white:hover {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border-color: #ffffff !important;
+  color: #ffffff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(255, 255, 255, 0.2) !important;
+}
+
+.vendor-onboarding-section .btn-outline-white:hover span,
+.vendor-onboarding-section .btn-outline-white:hover svg {
+  color: #ffffff !important;
+}
+
+.vendor-onboarding-section .btn-outline-white:hover svg path {
+  stroke: #ffffff !important;
+  fill: #ffffff !important;
+}
+
+/* Dark Theme Support */
+.dark-theme .vendor-onboarding-section {
+  background: linear-gradient(135deg, #014a81 0%, #ff3008 100%) !important;
+}
+
+.dark-theme .vendor-onboarding-title,
+.dark-theme .vendor-onboarding-subtitle,
+.dark-theme .vendor-stat-number,
+.dark-theme .vendor-stat-label,
+.dark-theme .vendor-onboarding-footer {
+  color: #ffffff !important;
+}
+
+/* Ensure buttons work in both themes */
+.dark-theme .vendor-onboarding-section .btn-white {
+  background: #ffffff !important;
+  color: #014a81 !important;
+  border: 2px solid #ffffff !important;
+}
+
+.dark-theme .vendor-onboarding-section .btn-white span,
+.dark-theme .vendor-onboarding-section .btn-white svg {
+  color: #014a81 !important;
+}
+
+.dark-theme .vendor-onboarding-section .btn-white svg path {
+  stroke: #014a81 !important;
+}
+
+.light-theme .vendor-onboarding-section .btn-white {
+  background: #ffffff !important;
+  color: #014a81 !important;
+  border: 2px solid #ffffff !important;
+}
+
+.light-theme .vendor-onboarding-section .btn-white span,
+.light-theme .vendor-onboarding-section .btn-white svg {
+  color: #014a81 !important;
+}
+
+.light-theme .vendor-onboarding-section .btn-white svg path {
+  stroke: #014a81 !important;
+}
+
+.dark-theme .vendor-onboarding-section .btn-outline-white,
+.light-theme .vendor-onboarding-section .btn-outline-white {
+  background: transparent !important;
+  color: #ffffff !important;
+  border: 2px solid rgba(255, 255, 255, 0.8) !important;
+}
+
+.dark-theme .vendor-onboarding-section .btn-outline-white span,
+.dark-theme .vendor-onboarding-section .btn-outline-white svg,
+.light-theme .vendor-onboarding-section .btn-outline-white span,
+.light-theme .vendor-onboarding-section .btn-outline-white svg {
+  color: #ffffff !important;
+}
+
+.dark-theme .vendor-onboarding-section .btn-outline-white svg path,
+.light-theme .vendor-onboarding-section .btn-outline-white svg path {
+  stroke: #ffffff !important;
+  fill: #ffffff !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .vendor-onboarding-title {
+    font-size: 2.25rem;
+  }
+  
+  .vendor-onboarding-subtitle {
+    font-size: 1.25rem;
+  }
+  
+  .vendor-stats-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .vendor-onboarding-cta {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .vendor-onboarding-cta .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}

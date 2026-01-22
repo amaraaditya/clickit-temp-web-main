@@ -55,29 +55,62 @@ All critical values are declared in `config/constants.js`, making it easy to upd
 ## Getting Started
 
 ### Prerequisites
-- Node.js (v12 or higher)
+- Node.js (v14 or higher)
+- npm or yarn
 
-### Installation
+### Local Development
+
 1. Clone or download this repository
 2. Navigate to the project directory:
    ```bash
    cd click-it-web
    ```
-
-### Running the Server
-```bash
-npm start
-```
-
-Or directly with Node:
-```bash
-node server.js
-```
+3. Start the development server:
+   ```bash
+   npm start
+   ```
 
 The website will be available at `http://localhost:3000`
 
-### Development
-For development, you can also open `index.html` directly in a browser, though some features (like the server) won't be available.
+### Building for Production
+
+To build optimized files for AWS S3 deployment:
+
+```bash
+npm run build
+```
+
+This creates a `dist/` directory with:
+- **Bundled CSS** (`css/bundle.css`) - combines 9 CSS files into 1
+- **Bundled JS** (`js/bundle.js`) - combines 4 JS files into 1
+- **Optimized HTML** - updated to use bundled assets
+- **All static assets** - images, config files
+
+**Performance Benefits:**
+- ✅ Reduces HTTP requests from 13+ to 3-4 per page
+- ✅ 30-40% smaller file sizes through minification
+- ✅ Better browser caching with proper cache headers
+- ✅ Faster page load times
+
+### AWS S3 Deployment
+
+See [AWS-DEPLOYMENT.md](./AWS-DEPLOYMENT.md) for detailed deployment instructions.
+
+**Quick deploy:**
+```bash
+npm run deploy
+```
+
+**Custom bucket:**
+```bash
+./deploy.sh your-bucket-name us-east-1
+```
+
+The deployment script automatically:
+- Creates S3 bucket (if needed)
+- Enables static website hosting
+- Sets proper cache headers for optimal performance
+- Configures public access securely
 
 ## Customization
 

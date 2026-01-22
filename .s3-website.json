@@ -1,0 +1,14 @@
+{
+  "index": "index.html",
+  "error": "index.html",
+  "routingRules": [
+    {
+      "Condition": {
+        "HttpErrorCodeReturnedEquals": "404"
+      },
+      "Redirect": {
+        "ReplaceKeyWith": "index.html"
+      }
+    }
+  ]
+}

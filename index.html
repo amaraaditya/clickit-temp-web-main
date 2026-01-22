@@ -8,19 +8,10 @@
     <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
-    <!-- Navigation -->
+    <!-- Navigation - Rendered by components.js -->
     <nav class="nav">
         <div class="nav-container">
-            <a href="index.html" class="nav-logo">
-                <img src="./images/full_logo_with_text.png" alt="Click IT" class="logo-img">
-            </a>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="customers.html">For Customers</a></li>
-                <li><a href="vendors.html">For Vendors</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
+            <!-- Navigation will be inserted here by components.js -->
         </div>
     </nav>
 
@@ -30,36 +21,47 @@
         <div class="container">
             <div class="hero-grid">
                 <div class="hero-text-content">
-                    <div class="hero-badge">
-                        <span class="badge-icon">✓</span>
-                        <span>Coming Soon - Launching Q1 2026</span>
+                    <div class="hero-badge pulse-badge">
+                        <span class="badge-icon">🚀</span>
+                        <span>Launching in the UK - Q1 2026</span>
                     </div>
-                    <h1>Urban life, simplified. <span class="highlight-text">On tap.</span></h1>
-                    <p class="hero-tagline">Essentials delivery and small-item movement across the city</p>
+                    <h1 class="hero-headline">
+                        Everything you need.<br>
+                        <span class="highlight-text">One tap away.</span>
+                    </h1>
+                    <p class="hero-tagline">
+                        The UK's smartest urban logistics platform. Get essentials delivered, move small items across the city, and simplify your life — all in one trusted app.
+                    </p>
                     <p class="hero-description">
-                        <strong>Click IT simplifies urban life</strong> by helping people get essentials and move small items (≤16 kg) across the city using a single trusted platform. Unlike food delivery or pure quick-commerce apps, Click IT operates as <strong>urban logistics infrastructure</strong> — designed for reliability, repeat usage, and long-term trust.
+                        Stop juggling multiple apps. <strong>Click IT</strong> brings together everything you need: daily essentials, small-item delivery (≤16 kg), and reliable logistics — with transparent pricing and UK-focused service you can trust.
                     </p>
                     <div class="hero-cta">
-                        <a href="contact.html" class="btn btn-primary btn-large">
-                            <span>Get Early Access</span>
+                        <a href="contact.html" class="btn btn-primary btn-large hero-cta-primary">
+                            <span>Join the Waitlist</span>
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                         </a>
-                        <a href="about.html" class="btn btn-secondary btn-large">Learn How It Works</a>
+                        <a href="about.html" class="btn btn-secondary btn-large hero-cta-secondary">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-right: 0.5rem;">
+                                <path d="M10 3.33333C6.3181 3.33333 3.33333 6.3181 3.33333 10C3.33333 13.6819 6.3181 16.6667 10 16.6667C13.6819 16.6667 16.6667 13.6819 16.6667 10C16.6667 6.3181 13.6819 3.33333 10 3.33333ZM10 15C7.23858 15 5 12.7614 5 10C5 7.23858 7.23858 5 10 5C12.7614 5 15 7.23858 15 10C15 12.7614 12.7614 15 10 15Z" fill="currentColor"/>
+                                <path d="M10 7.5V10L12.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                            See How It Works
+                        </a>
                     </div>
                     <div class="hero-stats">
-                        <div class="stat-item">
-                            <div class="stat-number">100%</div>
-                            <div class="stat-label">Expected Satisfaction Rate</div>
+                        <div class="stat-item stat-item-animated">
+                            <div class="stat-number" data-target="100">0</div>
+                            <div class="stat-label">Reliability Target</div>
                         </div>
-                        <div class="stat-item">
+                        <div class="stat-item stat-item-animated">
                             <div class="stat-number">24/7</div>
-                            <div class="stat-label">Future Availability</div>
+                            <div class="stat-label">Future Service</div>
                         </div>
-                        <div class="stat-item">
-                            <div class="stat-number">100%</div>
-                            <div class="stat-label">Target Reliability</div>
+                        <div class="stat-item stat-item-animated">
+                            <div class="stat-number">≤16kg</div>
+                            <div class="stat-label">Item Weight Limit</div>
                         </div>
                     </div>
                 </div>
@@ -77,32 +79,53 @@
     <!-- Coming Soon - App Stores -->
     <section class="coming-soon-section">
         <div class="container">
-            <div class="coming-soon-content">
-                <div class="coming-soon-icon">
-                    <img src="./images/logo.png" alt="Click IT App" class="app-logo-large">
+            <div class="coming-soon-wrapper">
+                <div class="coming-soon-icon-wrapper">
+                    <img src="./images/logo_new.png" alt="Click IT App" class="app-logo-large">
                 </div>
-                <h2>Coming Soon to App Stores</h2>
-                <p class="coming-soon-description">
-                    The Click IT app will be available soon on iOS and Android. Be the first to know when we launch!
-                </p>
-                <div class="app-store-badges">
-                    <div class="app-badge">
-                        <svg width="140" height="45" viewBox="0 0 140 45" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect width="140" height="45" rx="10" fill="#000000"/>
-                            <text x="70" y="28" font-family="Arial, sans-serif" font-size="14" font-weight="600" fill="#ffffff" text-anchor="middle">App Store</text>
-                        </svg>
-                        <span class="badge-label">Coming Soon</span>
+                <div class="coming-soon-content-wrapper">
+                    <h2 class="coming-soon-title">Get the App First</h2>
+                    <p class="coming-soon-description">
+                        Join our waitlist for early access when we launch on iOS and Android.
+                    </p>
+                    <div class="app-store-badges-wrapper">
+                        <div class="app-badge-wrapper">
+                            <div class="app-badge app-badge-interactive">
+                                <div class="app-badge-content">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M17.05 20.28c-.98.95-2.05.88-3.08.4-1.09-.5-2.08-.96-3.24-.96-1.24 0-2 .5-3.04.96-1.26.58-2.17.55-3.23-.4C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/>
+                                    </svg>
+                                    <div class="app-badge-text">
+                                        <div class="app-badge-label">Download on the</div>
+                                        <div class="app-badge-name">App Store</div>
+                                    </div>
+                                </div>
+                                <div class="badge-label">Coming Soon</div>
+                            </div>
+                        </div>
+                        <div class="app-badge-wrapper">
+                            <div class="app-badge app-badge-interactive">
+                                <div class="app-badge-content">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z"/>
+                                    </svg>
+                                    <div class="app-badge-text">
+                                        <div class="app-badge-label">Get it on</div>
+                                        <div class="app-badge-name">Google Play</div>
+                                    </div>
+                                </div>
+                                <div class="badge-label">Coming Soon</div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="app-badge">
-                        <svg width="140" height="45" viewBox="0 0 140 45" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect width="140" height="45" rx="10" fill="#000000"/>
-                            <text x="70" y="28" font-family="Arial, sans-serif" font-size="14" font-weight="600" fill="#ffffff" text-anchor="middle">Play Store</text>
-                        </svg>
-                        <span class="badge-label">Coming Soon</span>
+                    <div class="coming-soon-cta">
+                        <a href="contact.html" class="btn btn-primary btn-large btn-pulse">
+                            <span>Join the Waitlist</span>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
                     </div>
-                </div>
-                <div class="coming-soon-cta">
-                    <a href="contact.html" class="btn btn-primary btn-large">Notify Me When Available</a>
                 </div>
             </div>
         </div>
@@ -113,56 +136,70 @@
         <div class="container">
             <div class="section-header-modern">
                 <h2>How It Works</h2>
-                <p class="section-subtitle">Reliability over raw speed. Fewer decisions, less stress. Infrastructure mindset, not marketplace chaos.</p>
+                <p class="section-subtitle">Three simple steps to transform how you handle urban logistics. Built for reliability, designed for your peace of mind.</p>
             </div>
-            <div class="how-it-works-modern">
-                <div class="how-it-works-steps">
-                    <div class="step-card">
-                        <div class="step-number">1</div>
-                        <div class="step-content">
-                            <div class="feature-icon">
-                                <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <rect width="64" height="64" rx="16" fill="rgba(200, 16, 46, 0.1)"/>
-                                    <path d="M32 16L20 28H26V44H38V28H44L32 16Z" fill="#C8102E"/>
+            <div class="how-it-works-redesigned">
+                <div class="how-it-works-grid">
+                    <div class="step-card-redesigned">
+                        <div class="step-number-redesigned">
+                            <span>01</span>
+                        </div>
+                        <div class="step-icon-wrapper">
+                            <div class="step-icon-circle">
+                                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20 10L12.5 17.5H16.25V26.25H23.75V17.5H27.5L20 10Z" fill="currentColor"/>
                                 </svg>
                             </div>
-                            <h3>Get</h3>
-                            <p>Essentials delivered to your door through a single trusted platform. Order with confidence, receive with reliability.</p>
+                        </div>
+                        <div class="step-content-redesigned">
+                            <h3>Get Essentials</h3>
+                            <p>Order daily essentials through our platform. One app, reliable delivery, transparent pricing. Everything you need, delivered to your door.</p>
                         </div>
                     </div>
-                    <div class="step-connector"></div>
-                    <div class="step-card">
-                        <div class="step-number">2</div>
-                        <div class="step-content">
-                            <div class="feature-icon">
-                                <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <rect width="64" height="64" rx="16" fill="rgba(200, 16, 46, 0.1)"/>
-                                    <path d="M32 20L44 32H38V48H26V32H20L32 20Z" fill="#C8102E"/>
+                    
+                    <div class="step-card-redesigned">
+                        <div class="step-number-redesigned">
+                            <span>02</span>
+                        </div>
+                        <div class="step-icon-wrapper">
+                            <div class="step-icon-circle">
+                                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20 12.5L27.5 20H23.75V28.75H16.25V20H12.5L20 12.5Z" fill="currentColor"/>
                                 </svg>
                             </div>
-                            <h3>Move</h3>
-                            <p>Small items (≤16 kg) moved across the city with the same reliability. Documents, packages, essentials — all handled with care.</p>
+                        </div>
+                        <div class="step-content-redesigned">
+                            <h3>Move Items</h3>
+                            <p>Send small items (≤16 kg) across the city with the same reliability. Documents, packages, essentials — handled with care and precision.</p>
                         </div>
                     </div>
-                    <div class="step-connector"></div>
-                    <div class="step-card">
-                        <div class="step-number">3</div>
-                        <div class="step-content">
-                            <div class="feature-icon">
-                                <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <rect width="64" height="64" rx="16" fill="rgba(200, 16, 46, 0.1)"/>
-                                    <circle cx="32" cy="32" r="16" fill="#C8102E" opacity="0.3"/>
-                                    <path d="M32 20L32 32L42 42" stroke="#C8102E" stroke-width="3" fill="none" stroke-linecap="round"/>
+                    
+                    <div class="step-card-redesigned">
+                        <div class="step-number-redesigned">
+                            <span>03</span>
+                        </div>
+                        <div class="step-icon-wrapper">
+                            <div class="step-icon-circle">
+                                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="20" cy="20" r="10" fill="currentColor" opacity="0.3"/>
+                                    <path d="M20 12.5L20 20L26.25 26.25" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/>
                                 </svg>
                             </div>
-                            <h3>Trust</h3>
-                            <p>Built for reliability, repeat usage, and long-term relationships. Your trusted partner in urban logistics.</p>
+                        </div>
+                        <div class="step-content-redesigned">
+                            <h3>Trust & Repeat</h3>
+                            <p>Built for long-term relationships. Reliable service, consistent quality, and peace of mind. Your trusted partner in urban logistics.</p>
                         </div>
                     </div>
                 </div>
-                <div class="how-it-works-image-modern">
-                    <img src="./images/fast_delivery_vehicle.jpg" alt="Fast delivery vehicle" class="section-image">
-                    <div class="image-overlay"></div>
+                <div class="how-it-works-image-redesigned">
+                    <div class="image-wrapper-premium">
+                        <img src="./images/fast_delivery_vehicle.jpg" alt="Fast delivery vehicle" class="section-image">
+                        <div class="image-gradient-overlay"></div>
+                        <div class="floating-badge">
+                            <span>⚡ Fast & Reliable</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -172,8 +209,8 @@
     <section class="section premium-section">
         <div class="container">
             <div class="section-header-modern">
-                <h2>For Customers</h2>
-                <p class="section-subtitle">One platform. Infinite possibilities. Zero stress.</p>
+                <h2>Built for You</h2>
+                <p class="section-subtitle">One app. Everything you need. Zero hassle. Experience the simplicity of urban logistics done right.</p>
             </div>
             <div class="customers-modern-grid">
                 <div class="customers-image-wrapper">
@@ -184,33 +221,38 @@
                 </div>
                 <div class="customers-content-wrapper">
                     <div class="content-block">
-                        <h3>Simplify Your Urban Life</h3>
+                        <h3>Your Life, Simplified</h3>
                         <p class="bold-statement-large">
-                            <strong>Click IT reduces the complexity of urban life</strong> by consolidating multiple needs into one platform and one trusted network.
+                            Stop juggling apps. <strong>Click IT</strong> brings everything together — essentials delivery, small-item movement, and reliable logistics — in one beautifully simple platform.
                         </p>
                         <p>
-                            No more switching between food delivery, grocery apps, and courier services. Click IT handles essentials and small-item movement in one place with predictive orders, pre-built baskets, transparent pricing, and reliable delivery.
+                            No more switching between multiple apps. No more guessing about delivery times or hidden fees. <strong>Click IT</strong> gives you one trusted platform for all your urban logistics needs, with transparent pricing, reliable service, and UK-focused support.
                         </p>
                         <div class="benefits-grid">
-                            <div class="benefit-item">
-                                <div class="benefit-icon">✓</div>
-                                <span>One app for all your needs</span>
+                            <div class="benefit-item benefit-item-hover">
+                                <div class="benefit-icon">✨</div>
+                                <span>One app, infinite possibilities</span>
                             </div>
-                            <div class="benefit-item">
-                                <div class="benefit-icon">✓</div>
-                                <span>Predictive ordering technology</span>
+                            <div class="benefit-item benefit-item-hover">
+                                <div class="benefit-icon">⚡</div>
+                                <span>Smart, predictive ordering</span>
                             </div>
-                            <div class="benefit-item">
-                                <div class="benefit-icon">✓</div>
+                            <div class="benefit-item benefit-item-hover">
+                                <div class="benefit-icon">💷</div>
                                 <span>Transparent, fair pricing</span>
                             </div>
-                            <div class="benefit-item">
-                                <div class="benefit-icon">✓</div>
+                            <div class="benefit-item benefit-item-hover">
+                                <div class="benefit-icon">🚚</div>
                                 <span>Reliable, on-time delivery</span>
                             </div>
                         </div>
                         <div class="cta-inline">
-                            <a href="customers.html" class="btn btn-primary">Explore Customer Benefits</a>
+                            <a href="customers.html" class="btn btn-primary btn-arrow">
+                                <span>Discover All Benefits</span>
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -222,39 +264,44 @@
     <section class="section section-alt premium-section">
         <div class="container">
             <div class="section-header-modern">
-                <h2>For Vendors</h2>
-                <p class="section-subtitle">Partners, not listings. Data, not guesswork. Growth, not just transactions.</p>
+                <h2>Grow Your Business</h2>
+                <p class="section-subtitle">Join the UK's newest logistics platform. Get data-driven insights, powerful tools, and real partnership — not just another listing.</p>
             </div>
             <div class="vendors-modern-grid">
                 <div class="vendors-content-wrapper">
                     <div class="content-block">
-                        <h3>Grow Your Business with Data</h3>
+                        <h3>Partners, Not Just Vendors</h3>
                         <p class="bold-statement-large">
-                            <strong>Click IT treats vendors as partners</strong> in building a better urban logistics ecosystem. This means providing real value through data, insights, and tools that help vendors succeed.
+                            <strong>Click IT</strong> is built on partnership. We provide real value through powerful analytics, actionable insights, and tools designed to help your UK business thrive.
                         </p>
                         <p>
-                            Get access to local customer analytics, product feedback intelligence, pricing insights, and inventory management tools. We don't treat vendors as interchangeable listings — every vendor is a partner.
+                            Get access to customer analytics that matter, product feedback intelligence, pricing optimization tools, and inventory insights. We're not building another marketplace — we're building a platform where every vendor partner can grow and succeed.
                         </p>
                         <div class="benefits-grid">
-                            <div class="benefit-item">
-                                <div class="benefit-icon">✓</div>
-                                <span>Advanced customer analytics</span>
+                            <div class="benefit-item benefit-item-hover">
+                                <div class="benefit-icon">📊</div>
+                                <span>Deep customer analytics</span>
                             </div>
-                            <div class="benefit-item">
-                                <div class="benefit-icon">✓</div>
+                            <div class="benefit-item benefit-item-hover">
+                                <div class="benefit-icon">💡</div>
                                 <span>Product feedback intelligence</span>
                             </div>
-                            <div class="benefit-item">
-                                <div class="benefit-icon">✓</div>
+                            <div class="benefit-item benefit-item-hover">
+                                <div class="benefit-icon">💰</div>
                                 <span>Pricing optimization tools</span>
                             </div>
-                            <div class="benefit-item">
-                                <div class="benefit-icon">✓</div>
-                                <span>Inventory management insights</span>
+                            <div class="benefit-item benefit-item-hover">
+                                <div class="benefit-icon">📦</div>
+                                <span>Smart inventory insights</span>
                             </div>
                         </div>
                         <div class="cta-inline">
-                            <a href="vendors.html" class="btn btn-primary">Explore Vendor Benefits</a>
+                            <a href="vendors.html" class="btn btn-primary btn-arrow">
+                                <span>See Vendor Benefits</span>
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -268,22 +315,73 @@
         </div>
     </section>
 
+    <!-- Vendor Onboarding CTA -->
+    <section class="section vendor-onboarding-section">
+        <div class="container">
+            <div class="vendor-onboarding-header">
+                <h2 class="vendor-onboarding-title">Ready to Grow Your Business?</h2>
+                <p class="vendor-onboarding-subtitle">
+                    Join <strong>Click IT</strong> as a vendor partner and get access to powerful tools, real insights, and a platform built for your success. Onboard in 48 hours and start accepting orders.
+                </p>
+            </div>
+            <div class="vendor-onboarding-content">
+                <div class="vendor-stats-grid">
+                    <div class="vendor-stat-card">
+                        <div class="vendor-stat-number">48hrs</div>
+                        <div class="vendor-stat-label">Quick Onboarding</div>
+                    </div>
+                    <div class="vendor-stat-card">
+                        <div class="vendor-stat-number">£0</div>
+                        <div class="vendor-stat-label">No Setup Fees</div>
+                    </div>
+                    <div class="vendor-stat-card">
+                        <div class="vendor-stat-number">24/7</div>
+                        <div class="vendor-stat-label">Support Available</div>
+                    </div>
+                </div>
+                <div class="vendor-onboarding-cta">
+                    <a href="contact.html?type=vendor" class="btn btn-primary btn-large btn-white">
+                        <span>Start Your Partnership</span>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                    <a href="vendors.html" class="btn btn-secondary btn-large btn-outline-white">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-right: 0.5rem;">
+                            <path d="M10 3.33333C6.3181 3.33333 3.33333 6.3181 3.33333 10C3.33333 13.6819 6.3181 16.6667 10 16.6667C13.6819 16.6667 16.6667 13.6819 16.6667 10C16.6667 6.3181 13.6819 3.33333 10 3.33333ZM10 15C7.23858 15 5 12.7614 5 10C5 7.23858 7.23858 5 10 5C12.7614 5 15 7.23858 15 10C15 12.7614 12.7614 15 10 15Z" fill="currentColor"/>
+                            <path d="M10 7.5V10L12.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>
+                        Learn More
+                    </a>
+                </div>
+                <p class="vendor-onboarding-footer">
+                    UK businesses only. Simple onboarding process. Start accepting orders within 48 hours.
+                </p>
+            </div>
+        </div>
+    </section>
+
     <!-- Why Click IT - Brief -->
     <section class="section premium-cta-section">
         <div class="container">
             <div class="premium-cta-content">
                 <div class="premium-cta-text">
-                    <h2>Why Click IT</h2>
+                    <h2>Why Click IT Exists</h2>
                     <p class="bold-statement-large emphasis">
                         <strong>Cities don't need more apps. They need fewer, better systems.</strong>
                     </p>
                     <p class="bold-statement">
-                        Click IT exists to quietly make urban life easier. Not through marketing campaigns or discount wars, but through <strong>thoughtful design, reliable execution, and genuine value creation</strong> for customers and vendors alike.
+                        <strong>Click IT</strong> isn't built on flashy marketing or discount wars. We're built on <strong>thoughtful design, reliable execution, and genuine value</strong> — for both customers and vendor partners. Because urban logistics should work for everyone.
                     </p>
                 </div>
                 <div class="premium-cta-buttons">
-                    <a href="about.html" class="btn btn-primary btn-large">Learn More About Us</a>
-                    <a href="contact.html" class="btn btn-secondary btn-large">Get Started</a>
+                    <a href="about.html" class="btn btn-primary btn-large btn-arrow">
+                        <span>Our Story</span>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                    <a href="contact.html" class="btn btn-secondary btn-large">Get in Touch</a>
                 </div>
             </div>
         </div>
@@ -293,48 +391,7 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-section footer-brand">
-                    <a href="index.html" class="footer-logo">
-                        <img src="./images/full_logo_with_text.png" alt="Click IT" class="footer-logo-img">
-                    </a>
-                    <p class="footer-tagline">Urban life, simplified. On tap.</p>
-                    <p class="footer-description">Essentials delivery and small-item movement across the city using a single trusted platform.</p>
-                </div>
-                
-                <div class="footer-section footer-links">
-                    <h3 class="footer-heading">Quick Links</h3>
-                    <ul class="footer-nav">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="customers.html">For Customers</a></li>
-                        <li><a href="vendors.html">For Vendors</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section footer-info">
-                    <h3 class="footer-heading">Get in Touch</h3>
-                    <ul class="footer-contact">
-                        <li>
-                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M2.5 6.66667L10 11.6667L17.5 6.66667M3.33333 15H16.6667C17.5871 15 18.3333 14.2538 18.3333 13.3333V6.66667C18.3333 5.74619 17.5871 5 16.6667 5H3.33333C2.41286 5 1.66667 5.74619 1.66667 6.66667V13.3333C1.66667 14.2538 2.41286 15 3.33333 15Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                            <span>info@clickit.com</span>
-                        </li>
-                        <li>
-                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M2.5 4.16667H6.25L8.33333 8.33333L6.25 10C7.08333 12.5 9.16667 14.5833 11.6667 15.4167L13.3333 13.3333L17.5 15.4167V19.1667C17.5 19.625 17.125 20 16.6667 20C7.5 20 0 12.5 0 3.33333C0 2.875 0.375 2.5 0.833333 2.5H4.58333V6.25L2.5 8.33333L4.58333 10L6.25 8.33333L8.33333 10.4167L6.25 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                            <span>+44 20 1234 5678</span>
-                        </li>
-                        <li>
-                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M17.5 10C17.5 14.1421 14.1421 17.5 10 17.5M17.5 10C17.5 5.85786 14.1421 2.5 10 2.5M17.5 10H2.5M10 17.5C5.85786 17.5 2.5 14.1421 2.5 10M10 17.5C11.3807 17.5 12.5 14.1421 12.5 10C12.5 5.85786 11.3807 2.5 10 2.5M10 17.5C8.61929 17.5 7.5 14.1421 7.5 10C7.5 5.85786 8.61929 2.5 10 2.5M2.5 10C2.5 5.85786 5.85786 2.5 10 2.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                            <span>London, United Kingdom</span>
-                        </li>
-                    </ul>
-                </div>
+                <!-- Footer content will be inserted here by components.js -->
             </div>
             
             <div class="footer-bottom">
@@ -350,8 +407,10 @@
         </div>
     </footer>
 
-    <!-- Scripts -->
+    <!-- Scripts - Load in order: config, theme, components, main -->
     <script src="./config/constants.js"></script>
+    <script src="./js/theme.js"></script>
+    <script src="./js/components.js"></script>
     <script src="./js/main.js"></script>
 </body>
 </html>

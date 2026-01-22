@@ -1,34 +1,34 @@
-# Dependencies
+# Build output
+dist/
+build/
+
+# Node modules (if added later)
 node_modules/
-package-lock.json
-
-# Lambda deployment
-lambda/node_modules/
-lambda/function.zip
-lambda/package-lock.json
-
-# AWS
-.aws/
-*.pem
 
 # Environment variables
 .env
 .env.local
 
-# OS
+# AWS credentials
+.aws/
+*.pem
+
+# OS files
 .DS_Store
 Thumbs.db
 
-# IDE
+# IDE files
 .vscode/
 .idea/
 *.swp
 *.swo
+*~
 
 # Logs
 *.log
 npm-debug.log*
 
 # Temporary files
-/tmp/
+tmp/
+temp/
 *.tmp

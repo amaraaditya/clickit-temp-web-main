@@ -1,0 +1,349 @@
+/**
+ * Homepage-Specific Enhancements
+ * Professional interactions, animations, and improved styling
+ */
+
+/* Hero Section Enhancements */
+.hero-headline {
+  font-size: 4.5rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.03em;
+  animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+.hero-headline .highlight-text {
+  background: linear-gradient(135deg, var(--color-orange) 0%, var(--color-blue) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline-block;
+  position: relative;
+}
+
+.pulse-badge {
+  animation: pulseBadge 2s ease-in-out infinite;
+}
+
+@keyframes pulseBadge {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 2px 8px rgba(255, 48, 8, 0.2);
+  }
+  50% {
+    transform: scale(1.02);
+    box-shadow: 0 4px 16px rgba(255, 48, 8, 0.3);
+  }
+}
+
+/* Hero CTA Enhancements */
+.hero-cta-primary {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hero-cta-primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.hero-cta-primary:hover::before {
+  left: 100%;
+}
+
+.hero-cta-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(255, 48, 8, 0.4);
+}
+
+.hero-cta-secondary {
+  transition: all 0.3s ease;
+}
+
+.hero-cta-secondary:hover {
+  transform: translateX(4px);
+  background: var(--bg-tertiary);
+}
+
+/* Stats Animation */
+.stat-item-animated {
+  transition: transform 0.3s ease;
+}
+
+.stat-item-animated:hover {
+  transform: translateY(-4px);
+}
+
+.stat-number {
+  transition: all 0.3s ease;
+}
+
+/* App Store Badges */
+.app-badge-interactive {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.app-badge-interactive::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transition: left 0.5s;
+}
+
+.app-badge-interactive:hover::before {
+  left: 100%;
+}
+
+.app-badge-interactive:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.app-badge-content {
+  display: flex;
+  align-items: center;
+  padding: 1rem 1.5rem;
+}
+
+.app-badge-label {
+  font-size: 0.75rem;
+  opacity: 0.8;
+  margin-bottom: 0.25rem;
+}
+
+.app-badge-name {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+/* Button with Arrow */
+.btn-arrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-arrow svg {
+  transition: transform 0.3s ease;
+}
+
+.btn-arrow:hover svg {
+  transform: translateX(4px);
+}
+
+.btn-arrow:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 48, 8, 0.3);
+}
+
+/* Pulse Button */
+.btn-pulse {
+  position: relative;
+  animation: pulseButton 2s ease-in-out infinite;
+}
+
+@keyframes pulseButton {
+  0%, 100% {
+    box-shadow: 0 4px 16px rgba(255, 48, 8, 0.3);
+  }
+  50% {
+    box-shadow: 0 4px 24px rgba(255, 48, 8, 0.5);
+  }
+}
+
+/* Benefit Items with Hover */
+/* Benefit items styling moved to premium-design.css for consistency */
+
+/* Step Cards Enhancement */
+.step-card {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+.step-card:hover {
+  transform: translateY(-8px);
+}
+
+.step-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 20px;
+  padding: 2px;
+  background: linear-gradient(135deg, var(--color-orange), var(--color-blue));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.step-card:hover::after {
+  opacity: 1;
+}
+
+/* White Button on Gradient */
+.btn-white {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-white:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 32px rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.95) !important;
+}
+
+.btn-outline-white {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-outline-white:hover {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border-color: #ffffff !important;
+  transform: translateY(-3px);
+}
+
+/* Section Header Animations */
+.section-header-modern h2 {
+  position: relative;
+  display: inline-block;
+}
+
+.section-header-modern h2::after {
+  content: '';
+  position: absolute;
+  bottom: -0.5rem;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--color-orange), var(--color-blue));
+  border-radius: 2px;
+  animation: expandLine 0.8s ease-out 0.3s both;
+}
+
+@keyframes expandLine {
+  from {
+    width: 0;
+  }
+  to {
+    width: 60px;
+  }
+}
+
+/* Image Hover Effects */
+.premium-image {
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+}
+
+.premium-image:hover {
+  transform: scale(1.05);
+}
+
+.premium-image img {
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.premium-image:hover img {
+  transform: scale(1.1);
+}
+
+/* Gradient Section Enhancements */
+.vendor-onboarding {
+  position: relative;
+  overflow: hidden;
+}
+
+.vendor-onboarding::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+  animation: rotateGradient 20s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes rotateGradient {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+  .hero-headline {
+    font-size: 2.5rem;
+  }
+  
+  .app-badge-content {
+    padding: 0.75rem 1rem;
+  }
+  
+  .app-badge-name {
+    font-size: 1rem;
+  }
+}
+
+/* Smooth Scroll Behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Focus States for Accessibility */
+.btn:focus-visible,
+a:focus-visible {
+  outline: 3px solid var(--color-orange);
+  outline-offset: 2px;
+}
+
+/* Loading States */
+.btn.loading {
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+.btn.loading::after {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 50%;
+  left: 50%;
+  margin-left: -8px;
+  margin-top: -8px;
+  border: 2px solid currentColor;
+  border-radius: 50%;
+  border-top-color: transparent;
+  animation: spin 0.6s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

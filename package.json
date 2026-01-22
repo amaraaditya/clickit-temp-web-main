@@ -5,7 +5,11 @@
   "main": "index.html",
   "scripts": {
     "start": "node server.js",
-    "dev": "node server.js"
+    "dev": "node server.js",
+    "build": "node build.js",
+    "deploy": "bash deploy.sh",
+    "deploy:prod": "npm run build && bash deploy.sh click-it-website-prod",
+    "deploy:cloudfront": "npm run build && echo '📤 Files ready in dist/. Upload to S3 and invalidate CloudFront. See MANUAL-DEPLOYMENT.md'"
   },
   "keywords": ["logistics", "urban", "delivery"],
   "author": "",

@@ -1,0 +1,311 @@
+/**
+ * Theme Styles
+ * Dark theme overrides and theme-specific styles
+ * Dark theme is the default
+ */
+
+/* Section backgrounds */
+.dark-theme .section {
+  background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 30%, var(--bg-primary) 100%) !important;
+}
+
+.dark-theme .section-alt {
+  background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-tertiary) 50%, var(--bg-secondary) 100%) !important;
+}
+
+.dark-theme .hero {
+  background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 30%, var(--bg-tertiary) 60%, var(--bg-primary) 100%) !important;
+}
+
+/* Page hero sections */
+.dark-theme .page-hero-modern {
+  background: var(--bg-secondary) !important;
+}
+
+.dark-theme .page-hero-content h1,
+.dark-theme .page-hero-subtitle {
+  color: var(--text-primary) !important;
+}
+
+/* Cards and containers */
+.dark-theme .feature-card,
+.dark-theme .card,
+.dark-theme .premium-cta-content {
+  background: var(--bg-secondary);
+  border-color: var(--border-color);
+  color: var(--text-primary);
+}
+
+.dark-theme .feature-card h3,
+.dark-theme .card h3 {
+  color: var(--text-primary);
+}
+
+.dark-theme .feature-card p,
+.dark-theme .card p {
+  color: var(--text-secondary);
+}
+
+/* Text colors */
+.dark-theme .section-title,
+.dark-theme h1,
+.dark-theme h2,
+.dark-theme h3 {
+  color: var(--text-primary);
+}
+
+.dark-theme .hero-tagline,
+.dark-theme .hero-description,
+.dark-theme p {
+  color: var(--text-secondary);
+}
+
+/* Footer */
+.dark-theme .footer {
+  background: var(--bg-secondary);
+  border-top-color: var(--border-color);
+}
+
+.dark-theme .footer-heading {
+  color: var(--text-primary);
+}
+
+.dark-theme .footer-nav a,
+.dark-theme .footer-contact span {
+  color: var(--text-secondary);
+}
+
+.dark-theme .footer-nav a:hover {
+  color: var(--color-orange);
+}
+
+.dark-theme .footer-tagline,
+.dark-theme .footer-description {
+  color: var(--text-secondary);
+}
+
+/* Buttons maintain brand colors but adjust text */
+.dark-theme .btn-secondary {
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+  border-color: var(--border-color);
+}
+
+.dark-theme .btn-secondary:hover {
+  background: var(--bg-secondary);
+}
+
+/* Coming soon section */
+.dark-theme .coming-soon-section {
+  background: linear-gradient(135deg, #014a81 0%, #ff3008 30%, #014a81 60%, #ff3008 100%) !important;
+  background-size: 200% 200% !important;
+  animation: britishGradient 8s ease infinite !important;
+}
+
+.dark-theme .coming-soon-section h2,
+.dark-theme .coming-soon-title {
+  color: #ffffff !important;
+}
+
+.dark-theme .coming-soon-description {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.light-theme .coming-soon-section {
+  background: linear-gradient(135deg, #014a81 0%, #ff3008 30%, #014a81 60%, #ff3008 100%) !important;
+  background-size: 200% 200% !important;
+  animation: britishGradient 8s ease infinite !important;
+}
+
+.light-theme .coming-soon-section h2,
+.light-theme .coming-soon-title {
+  color: #ffffff !important;
+}
+
+.light-theme .coming-soon-description {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Stats */
+.dark-theme .stat-number {
+  color: var(--text-primary);
+}
+
+.dark-theme .stat-label {
+  color: var(--text-tertiary);
+}
+
+/* Form elements */
+.dark-theme input,
+.dark-theme textarea,
+.dark-theme select {
+  background: var(--bg-secondary);
+  border-color: var(--border-color);
+  color: var(--text-primary);
+}
+
+.dark-theme input::placeholder,
+.dark-theme textarea::placeholder {
+  color: var(--text-tertiary);
+}
+
+/* Navigation active state */
+.dark-theme .nav-links a.active {
+  color: var(--color-orange);
+}
+
+/* Contact info cards */
+.dark-theme .contact-info-card {
+  background: var(--bg-secondary);
+  border-color: var(--border-color);
+}
+
+.dark-theme .contact-info-card h3 {
+  color: var(--text-primary);
+}
+
+.dark-theme .contact-info-card p {
+  color: var(--text-secondary);
+}
+
+/* Additional text elements */
+.dark-theme .bold-statement,
+.dark-theme .bold-statement-large,
+.dark-theme .emphasis {
+  color: var(--text-primary) !important;
+}
+
+.dark-theme .section-subtitle {
+  color: var(--text-secondary) !important;
+}
+
+/* Hero badge */
+.dark-theme .hero-badge {
+  background: linear-gradient(135deg, rgba(255, 48, 8, 0.15) 0%, rgba(255, 48, 8, 0.08) 100%) !important;
+  border-color: rgba(255, 48, 8, 0.3) !important;
+  color: var(--color-orange) !important;
+}
+
+/* Feature cards and content boxes */
+.dark-theme .feature-item h3,
+.dark-theme .value-item h3 {
+  color: var(--text-primary) !important;
+}
+
+.dark-theme .feature-item p,
+.dark-theme .value-item p {
+  color: var(--text-secondary) !important;
+}
+
+/* Premium CTA sections */
+.dark-theme .premium-cta-section {
+  background: var(--bg-secondary) !important;
+}
+
+.dark-theme .premium-cta-text h2,
+.dark-theme .premium-cta-text p {
+  color: var(--text-primary) !important;
+}
+
+/* Coming soon section text */
+.dark-theme .coming-soon-section h2 {
+  color: var(--text-primary) !important;
+}
+
+/* Stats section */
+.dark-theme .hero-stats {
+  border-color: var(--border-color) !important;
+}
+
+/* Value proposition sections */
+.dark-theme .value-proposition h3,
+.dark-theme .value-proposition .bold-statement-large {
+  color: var(--text-primary) !important;
+}
+
+.dark-theme .value-proposition p {
+  color: var(--text-secondary) !important;
+}
+
+/* Vendor onboarding section */
+.dark-theme .vendor-onboarding {
+  background: var(--bg-secondary) !important;
+}
+
+.dark-theme .vendor-onboarding h2,
+.dark-theme .vendor-onboarding p {
+  color: var(--text-primary) !important;
+}
+
+/* All headings and paragraphs should use theme colors */
+.dark-theme h1,
+.dark-theme h2,
+.dark-theme h3,
+.dark-theme h4,
+.dark-theme h5,
+.dark-theme h6 {
+  color: var(--text-primary) !important;
+}
+
+.dark-theme p,
+.dark-theme li,
+.dark-theme span:not(.badge-icon) {
+  color: var(--text-secondary) !important;
+}
+
+/* Hero specific text */
+.dark-theme .hero h1 {
+  color: var(--text-primary) !important;
+}
+
+.dark-theme .hero-tagline {
+  color: var(--text-secondary) !important;
+}
+
+.dark-theme .hero-description {
+  color: var(--text-secondary) !important;
+}
+
+/* Links */
+.dark-theme a:not(.btn):not(.nav-links a) {
+  color: var(--color-orange) !important;
+}
+
+.dark-theme a:not(.btn):not(.nav-links a):hover {
+  color: var(--color-orange-dark) !important;
+}
+
+/* Highlight text */
+.dark-theme .highlight-text {
+  color: var(--color-orange) !important;
+}
+
+/* Section titles and subtitles */
+.dark-theme .section-title {
+  color: var(--text-primary) !important;
+}
+
+.dark-theme .section-subtitle {
+  color: var(--text-secondary) !important;
+}
+
+/* Premium sections */
+.dark-theme .premium-section {
+  background: var(--bg-secondary) !important;
+}
+
+/* Two column and three column layouts */
+.dark-theme .two-column,
+.dark-theme .three-column {
+  color: var(--text-primary);
+}
+
+/* Value sections */
+.dark-theme .value-section h2,
+.dark-theme .value-section h3 {
+  color: var(--text-primary) !important;
+}
+
+.dark-theme .value-section p {
+  color: var(--text-secondary) !important;
+}

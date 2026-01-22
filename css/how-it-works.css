@@ -1,0 +1,255 @@
+/**
+ * How It Works - Redesigned Section
+ * Modern, attractive design with better spacing and visual hierarchy
+ */
+
+.how-it-works-redesigned {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+  margin-top: 4rem;
+}
+
+.how-it-works-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.step-card-redesigned {
+  position: relative;
+  padding: 2.5rem;
+  background: #ffffff;
+  border-radius: 24px;
+  border: 2px solid rgba(255, 48, 8, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+}
+
+.step-card-redesigned::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background: linear-gradient(180deg, #ff3008 0%, #014a81 100%);
+  transform: scaleY(0);
+  transition: transform 0.4s ease;
+}
+
+.step-card-redesigned:hover::before {
+  transform: scaleY(1);
+}
+
+.step-card-redesigned:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(255, 48, 8, 0.2);
+  border-color: rgba(255, 48, 8, 0.3);
+}
+
+.step-number-redesigned {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  font-size: 4rem;
+  font-weight: 900;
+  background: linear-gradient(135deg, #ff3008 0%, #014a81 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  opacity: 0.1;
+  line-height: 1;
+  z-index: 0;
+}
+
+.step-icon-wrapper {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 1.5rem;
+}
+
+.step-icon-circle {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, rgba(255, 48, 8, 0.1) 0%, rgba(1, 74, 129, 0.1) 100%);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ff3008;
+  border: 2px solid rgba(255, 48, 8, 0.2);
+  transition: all 0.3s ease;
+}
+
+.step-card-redesigned:hover .step-icon-circle {
+  background: linear-gradient(135deg, #ff3008 0%, #014a81 100%);
+  color: #ffffff;
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 8px 24px rgba(255, 48, 8, 0.3);
+}
+
+.step-content-redesigned {
+  position: relative;
+  z-index: 1;
+}
+
+.step-content-redesigned h3 {
+  font-size: 1.75rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: -0.02em;
+}
+
+.step-content-redesigned p {
+  color: #555555;
+  font-size: 1.0625rem;
+  line-height: 1.8;
+  font-weight: 400;
+}
+
+.how-it-works-image-redesigned {
+  position: relative;
+  height: 600px;
+  border-radius: 28px;
+  overflow: hidden;
+}
+
+.image-wrapper-premium {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(255, 48, 8, 0.2);
+}
+
+.image-wrapper-premium .section-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.image-wrapper-premium:hover .section-image {
+  transform: scale(1.08);
+}
+
+.image-gradient-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, 
+    rgba(255, 48, 8, 0.1) 0%, 
+    rgba(1, 74, 129, 0.1) 50%, 
+    transparent 100%);
+  pointer-events: none;
+}
+
+.floating-badge {
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  padding: 1rem 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  border: 2px solid rgba(255, 48, 8, 0.2);
+  font-weight: 700;
+  color: #ff3008;
+  font-size: 1rem;
+  animation: floatBadge 3s ease-in-out infinite;
+}
+
+@keyframes floatBadge {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .how-it-works-redesigned {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  
+  .how-it-works-image-redesigned {
+    height: 400px;
+    order: -1;
+  }
+  
+  .how-it-works-grid {
+    gap: 2rem;
+  }
+}
+
+/* Dark Theme Styles */
+.dark-theme .step-card-redesigned {
+  background: var(--bg-secondary) !important;
+  border-color: var(--border-color) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3) !important;
+}
+
+.dark-theme .step-card-redesigned:hover {
+  box-shadow: 0 12px 40px rgba(255, 48, 8, 0.3) !important;
+  border-color: rgba(255, 48, 8, 0.4) !important;
+}
+
+.dark-theme .step-content-redesigned h3 {
+  background: linear-gradient(135deg, #f5f5f5 0%, #ffffff 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+}
+
+.dark-theme .step-content-redesigned p {
+  color: var(--text-secondary) !important;
+}
+
+.dark-theme .step-number-redesigned {
+  background: linear-gradient(135deg, #ff3008 0%, #014a81 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  opacity: 0.15 !important;
+}
+
+.dark-theme .step-icon-circle {
+  background: linear-gradient(135deg, rgba(255, 48, 8, 0.2) 0%, rgba(1, 74, 129, 0.2) 100%) !important;
+  border-color: rgba(255, 48, 8, 0.3) !important;
+}
+
+.dark-theme .floating-badge {
+  background: rgba(26, 29, 36, 0.95) !important;
+  color: var(--color-orange) !important;
+  border-color: rgba(255, 48, 8, 0.3) !important;
+}
+
+@media (max-width: 768px) {
+  .step-card-redesigned {
+    padding: 2rem;
+  }
+  
+  .step-number-redesigned {
+    font-size: 3rem;
+  }
+  
+  .step-icon-circle {
+    width: 64px;
+    height: 64px;
+  }
+  
+  .step-content-redesigned h3 {
+    font-size: 1.5rem;
+  }
+}

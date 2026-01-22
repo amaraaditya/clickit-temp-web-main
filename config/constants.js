@@ -1,6 +1,7 @@
 /**
  * Global Configuration and Constants
  * Critical values that can be easily modified for site-wide changes
+ * Update values here to change across all pages
  */
 
 const CONFIG = {
@@ -9,6 +10,21 @@ const CONFIG = {
     name: "Click IT",
     tagline: "Urban life, simplified. On tap.",
     description: "Essentials delivery and small-item movement across the city"
+  },
+
+  // Assets - Update logo paths here
+  assets: {
+    logo: "./images/logo_new.png",
+    fullLogo: "./images/full_logo_with_text_new.png"
+  },
+
+  // Contact Information - Update contact details here
+  contact: {
+    email: "hello@clickituk.co.uk",
+    supportEmail: "hello@clickituk.co.uk",
+    phone: "+44 20 1234 5678",
+    location: "United Kingdom",
+    hours: "Mon-Fri: 9 AM - 6 PM GMT"
   },
 
   // Weight Limit
@@ -26,11 +42,12 @@ const CONFIG = {
     whyExists: "why-exists"
   },
 
-  // Color Palette (to be customized later)
+  // Color Palette - Click IT Brand Colors
   colors: {
     primary: "#1a1a1a",
     secondary: "#4a4a4a",
-    accent: "#0066cc",
+    accent: "#ff3008", // Click IT Orange
+    accentSecondary: "#014a81", // Click IT Blue
     background: "#ffffff",
     text: "#2a2a2a",
     textLight: "#666666"
